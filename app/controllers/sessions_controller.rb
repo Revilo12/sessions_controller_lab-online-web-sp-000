@@ -3,8 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    binding.pry
-    if params[:name].nil?
+    if params[:name].nil? || params[:name] == ""
       redirect_to controller: 'sessions', action: 'new'
     end
   end
