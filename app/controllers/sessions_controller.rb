@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if logged_in?
+    if helpers.logged_in?
       redirect_to "/"
     else
       if params[:name].nil? || params[:name] == ""
