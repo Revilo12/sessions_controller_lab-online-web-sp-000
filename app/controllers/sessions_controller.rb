@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    binding.pry
     if helpers.logged_in?
       redirect_to '/'
     else
